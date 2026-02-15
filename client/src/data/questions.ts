@@ -194,11 +194,10 @@ export const questionSections: QuestionSection[] = [
       },
       {
         id: 'stylizedFile',
-        type: 'text',
+        type: 'file',
         text: '글꼴이 적용된 상표 파일',
         description: '글꼴이 적용된 상표를 업로드 해주시거나 info@firstregister.us로 보내 주시기 바랍니다(pdf형식으로).',
-        placeholder: '이메일로 발송 예정 / 파일명 입력',
-        required: true,
+        required: false,
         conditionalOn: {
           questionId: 'trademarkType',
           values: ['stylized'],
