@@ -1,0 +1,35 @@
+{
+  "name": "trademarks-questionnaire",
+  "version": "1.0.0",
+  "description": "고객 설문 수집 및 문서 자동 생성 웹 애플리케이션",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "cd client && npm install && npm run build",
+    "build:full": "npm run build:client && npm run build:server",
+    "build:server": "cd server && npm install && npm run build",
+    "build:client": "cd client && npm install && npm run build",
+    "start": "cd server && npm start",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "@types/uuid": "^10.0.0",
+    "@vercel/node": "^5.5.28",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "dependencies": {
+    "@types/archiver": "^7.0.0",
+    "archiver": "^7.0.1",
+    "docxtemplater": "^3.67.6",
+    "pizzip": "^3.2.0",
+    "redis": "^5.10.0",
+    "resend": "^4.0.0",
+    "uuid": "^13.0.0"
+  }
+}
