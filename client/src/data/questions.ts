@@ -213,11 +213,10 @@ export const questionSections: QuestionSection[] = [
       },
       {
         id: 'logoFile',
-        type: 'text',
+        type: 'file',
         text: '로고 파일',
         description: '등록을 원하는 로고를 업로드 해주시거나 info@firstregister.us로 보내 주시기 바랍니다(pdf형식으로).',
-        placeholder: '이메일로 발송 예정 / 파일명 입력',
-        required: true,
+        required: false,
         conditionalOn: {
           questionId: 'hasLogo',
           values: ['yes'],
@@ -296,11 +295,10 @@ export const questionSections: QuestionSection[] = [
       },
       {
         id: 'usageEvidence',
-        type: 'text',
+        type: 'file',
         text: '상표 사용 증거',
         description: '아래 두 가지 중에 한 가지의 제출이 필요합니다.\n1) 가능하다면, 상표를 사용 중인 웹사이트 링크를 알려 주세요.\n2) 상표가 적용된 상품이나 서비스를 보여 주는 사진 또는 브로슈어를 info@firstregister.us로 보내 주시기 바랍니다(스크린샷, 촬영본도 가능).',
-        placeholder: 'https://www.example.com 또는 이메일로 발송 예정',
-        required: true,
+        required: false,
         conditionalOn: {
           questionId: 'inCommercialUse',
           values: ['yes'],
