@@ -156,11 +156,10 @@ export const questionSections: QuestionSection[] = [
       },
       {
         id: 'companyDocument',
-        type: 'text',
+        type: 'file',
         text: '법인 등기부등본 또는 사업자등록증',
         description: '한국 회사가 상표권의 소유 주체가 될 경우 정확한 등록을 위해 1)법인 등기부등본 또는 2)사업자등록증 확인이 필요합니다.\n\n사본을 업로드 해주시거나 info@firstregister.us로 보내 주시기 바랍니다(스크린샷, 촬영본도 가능).',
-        placeholder: '이메일로 발송 예정 / 파일명 입력',
-        required: true,
+        required: false,
         conditionalOn: {
           questionId: 'companyCountry',
           values: ['korea'],

@@ -893,6 +893,34 @@ export default function SurveyForm() {
           </div>
         );
 
+      case 'file':
+        return (
+          <div className="file-upload">
+            <input
+              type="file"
+              id={`file-${question.id}`}
+              onChange={e => {
+                const file = e.target.files?.[0];
+                if (file) {
+                  handleAnswer(question.id, file.name);
+                }
+              }}
+              style={{ display: 'none' }}
+            />
+            <label htmlFor={`file-${question.id}`} className="btn btn-secondary" style={{ cursor: 'pointer', display: 'inline-block' }}>
+              파일 선택
+            </label>
+            {value && (
+              <span style={{ marginLeft: '12px', color: 'var(--color-text)' }}>
+                선택된 파일: {value as string}
+              </span>
+            )}
+            <p style={{ marginTop: '8px', fontSize: '0.85rem', color: 'var(--color-text-light)' }}>
+              또는 info@firstregister.us로 직접 보내주세요
+            </p>
+          </div>
+        );
+
       case 'repeatable_group':
         const groupItems = (value as unknown as RepeatableGroupItem[]) || [];
         const fields = question.groupFields || [];

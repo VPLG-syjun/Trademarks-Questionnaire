@@ -1,5 +1,5 @@
 // 질문 유형 정의
-export type QuestionType = 'text' | 'email' | 'tel' | 'number' | 'date' | 'yesno' | 'dropdown' | 'radio' | 'checkbox' | 'repeatable_group';
+export type QuestionType = 'text' | 'email' | 'tel' | 'number' | 'date' | 'yesno' | 'dropdown' | 'radio' | 'checkbox' | 'repeatable_group' | 'file';
 
 // 반복 그룹 내 필드 조건부 표시 규칙
 export interface GroupFieldConditional {
