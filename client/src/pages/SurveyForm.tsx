@@ -389,6 +389,12 @@ export default function SurveyForm() {
         let price = 0;
         if (question.priceEffect.type === 'perAnswer' && question.priceEffect.values) {
           price = question.priceEffect.values[answer as string] || 0;
+        } else if (question.priceEffect.type === 'perExtraSelection' && Array.isArray(answer)) {
+          // 다중 선택 시 무료 개수 초과분에 대해 추가 비용
+          const freeCount = question.priceEffect.freeCount || 0;
+          const perExtraPrice = question.priceEffect.perExtraPrice || 0;
+          const extraCount = Math.max(0, answer.length - freeCount);
+          price = extraCount * perExtraPrice;
         }
 
         if (price > 0) {

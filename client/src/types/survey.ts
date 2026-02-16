@@ -53,8 +53,10 @@ export interface Question {
   dynamicOptionsSource?: DynamicOptionsSource; // 동적 드롭다운 옵션 소스
   conditionalOn?: ConditionalRule; // 조건부 표시
   priceEffect?: {             // 가격에 영향
-    type: 'fixed' | 'perAnswer';
+    type: 'fixed' | 'perAnswer' | 'perExtraSelection';
     values?: Record<string, number>; // 답변별 금액
+    freeCount?: number;              // 무료 선택 개수 (perExtraSelection용)
+    perExtraPrice?: number;          // 초과 선택당 가격 (perExtraSelection용)
   };
   validation?: {
     pattern?: string;
