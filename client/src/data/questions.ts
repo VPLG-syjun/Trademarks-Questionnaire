@@ -36,6 +36,22 @@ export const questionSections: QuestionSection[] = [
         },
         documentField: 'customerEmail',
       },
+      {
+        id: 'confirmProceed',
+        type: 'yesno',
+        text: '본 설문은 일반적인 미국 상표권(Trademark)을 등록하기 위한 질문들로 구성되어 있습니다. 계속 진행하시겠습니까?',
+        description: '기본 서비스 비용은 $500이며, 제출하신 상표의 등록 가능성에 대한 간단한 리서치 제공을 포함하고 있습니다.',
+        required: true,
+        conditionalOn: {
+          questionId: 'agreeTerms',
+          values: ['1'],
+        },
+        priceEffect: {
+          type: 'fixed',
+          values: { 'yes': 500 },
+        },
+        documentField: 'confirmProceed',
+      },
     ],
   },
   {
