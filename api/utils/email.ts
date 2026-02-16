@@ -16,7 +16,7 @@ interface SurveyNotificationData {
 }
 
 const getSectionName = (index: number): string => {
-  const sectionNames = ['기본 정보', '회사 정보', '주소 정보', '이사회 정보', '임원 정보', '주주 정보', '금융 서비스', '추가 서비스', '최종 확인'];
+  const sectionNames = ['기본 정보', '상표권 소유 정보', '상표 정보', '등록 현황', '상표 사용 현황', '최종 확인'];
   return sectionNames[index] || `섹션 ${index + 1}`;
 };
 
