@@ -1194,7 +1194,7 @@ export default function SurveyForm() {
             <div className="terms-modal-body">
               <h4>1. 개인정보의 수집 및 이용 (Privacy Notice)</h4>
               <p>
-                본 서비스는 효율적인 법인 설립 지원을 위해 귀하의 이메일 및 답변 정보를 수집합니다.
+                본 서비스는 효율적인 상표권 등록 지원을 위해 귀하의 이메일 및 답변 정보를 수집합니다.
                 수집된 정보는 서비스 제공, 상담, 비용 청구 및 Formation Pro, LLC와 Venture Pacific Law Group, PC의
                 새로운 서비스 안내, 법률 업데이트 등 마케팅 목적으로 활용됩니다.
               </p>
