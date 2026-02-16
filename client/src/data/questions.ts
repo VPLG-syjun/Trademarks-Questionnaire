@@ -201,11 +201,16 @@ export const questionSections: QuestionSection[] = [
         id: 'trademarkType',
         type: 'dropdown',
         text: '상표가 일반 글자로 구성(Standard Characters)되어 있나요 아니면 특정한 글꼴이 적용(Stylized)되나요?',
+        description: 'Stylized 선택 시 $100 추가 비용이 발생합니다.',
         required: true,
         options: [
           { value: 'standard', label: 'Standard Characters (일반 글자)' },
-          { value: 'stylized', label: 'Stylized (특정 글꼴 적용)' },
+          { value: 'stylized', label: 'Stylized (특정 글꼴 적용) (+$100)' },
         ],
+        priceEffect: {
+          type: 'fixed',
+          values: { 'stylized': 100 },
+        },
         documentField: 'trademarkType',
       },
       {
@@ -224,7 +229,12 @@ export const questionSections: QuestionSection[] = [
         id: 'hasLogo',
         type: 'yesno',
         text: '상표의 로고도 등록하기 원하시나요?',
+        description: '로고 등록 시 $100 추가 비용이 발생합니다.',
         required: true,
+        priceEffect: {
+          type: 'fixed',
+          values: { 'yes': 100 },
+        },
         documentField: 'hasLogo',
       },
       {

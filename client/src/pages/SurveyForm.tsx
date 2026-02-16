@@ -387,7 +387,7 @@ export default function SurveyForm() {
         if (!question.priceEffect) return;
 
         let price = 0;
-        if (question.priceEffect.type === 'perAnswer' && question.priceEffect.values) {
+        if ((question.priceEffect.type === 'perAnswer' || question.priceEffect.type === 'fixed') && question.priceEffect.values) {
           price = question.priceEffect.values[answer as string] || 0;
         } else if (question.priceEffect.type === 'perExtraSelection' && Array.isArray(answer)) {
           // 다중 선택 시 무료 개수 초과분에 대해 추가 비용
